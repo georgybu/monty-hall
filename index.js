@@ -66,7 +66,7 @@ const statistic = {first: 0, changed: 0};
 const game = (i = 0) => {
     const doorWithPrize = putPrize();
     const firstAnswer = getAnswer();
-    const emptyDoor = showEmptyDoor();
+    const emptyDoor = showEmptyDoor(doorWithPrize, firstAnswer);
     const secondAnswer = changeSolution(firstAnswer, emptyDoor);
     const win = doorWithPrize === firstAnswer ? 'first answer' : 'changed answer';
 
